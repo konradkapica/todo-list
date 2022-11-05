@@ -5,20 +5,30 @@
     padding: 20px;
 }
 
-.listContainer__header {
-    background-color: white;
-    margin: 0;
-    margin-top: 10px;
-    padding: 20px;
-    border-bottom: 2px solid #eee;
-    font-size: 20px;
-}
-
-.list__item{
-    padding: 10px;
+.list__item {
     border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
 }
 
 .list__item--done {
     text-decoration: line-through;
+}
+
+.list__button {
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-right: 10px;
+}
+
+.list__button--done {
+    background-color: green;
+}
+
+.list__button--remove {
+    background-color: rgb(208, 0, 0);
 }
