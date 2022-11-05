@@ -7,8 +7,6 @@
 
 .list__item {
     border-bottom: 1px solid #eee;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -19,16 +17,18 @@
 }
 
 .list__button {
+    color: white;
     height: 30px;
     width: 30px;
     border: none;
-    margin-right: 10px;
 }
 
 .list__button--done {
     background-color: green;
+    margin-right: 10px;
 }
 
 .list__button--remove {
     background-color: rgb(208, 0, 0);
+    margin-left: 10px;
 }
