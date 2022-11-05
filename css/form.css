@@ -20,14 +20,11 @@
     margin-right: 20px;
     border: none;
     align-self: center;
-}
-
-.form__button:hover {
-    background-color: hsl(180, 100%, 30%);
+    text-decoration: none;
 }
 
 .form__button:active {
-    background-color: hsl(180, 100%, 35%);
+    border: 1px solid black;
 }
 
 @media (max-width: 767px) {
