@@ -1,23 +1,45 @@
 .form {
     background-color: white;
-}
-
-.form__header {
-    margin: 0;
-    padding: 20px;
-    border-bottom: 2px solid #eee;
-    font-size: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .form__input {
     margin: 20px;
     padding: 10px;
     border: 1px solid #eee;
+    flex-grow: 1;
 }
 
 .form__button {
+    height: 40px;
     background-color: teal;
     color: white;
     padding: 10px;
+    margin-right: 20px;
     border: none;
+    align-self: center;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
+}
+
+@media (max-width: 767px) {
+    .form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form__button {
+        flex-grow: 1;
+        align-self: stretch;
+        margin: 0 20px 20px 20px;
+    }
+
 }
