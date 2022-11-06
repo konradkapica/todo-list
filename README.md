@@ -1,10 +1,10 @@
 # To-Do List
 
-![Preview](images/Zrzut%20ekranu%20.png)
+![Preview](images/Zrzutekranu.png)
 
 ## DEMO
 
-[To-Do List demo](https://rudolfini.github.io/todo-list/)
+[To-Do List - demo](https://rudolfini.github.io/todo-list/)
 
 ## Description
 
