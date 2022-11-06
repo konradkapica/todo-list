@@ -1,14 +1,5 @@
 {
-  const tasks = [
-    {
-      content: "odrobić lekcje",
-      done: false,
-    },
-    {
-      content: "zjeść kebaba",
-      done: true,
-    },
-  ];
+  const tasks = [];
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
@@ -59,7 +50,7 @@
              <button class="list__button list__button--remove js-remove">&#128465</button>
            </li>
             `;
-    }
+    };
 
     document.querySelector(".js-tasks").innerHTML = htmlString;
 
@@ -73,10 +64,11 @@
     const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
     if (newTaskContent === "") {
-      return newTaskElement.focus();
-    }
-
-    addNewTask(newTaskContent);
+      newTaskElement.focus();
+    } else {
+      addNewTask(newTaskContent);
+      newTaskElement.value = "";
+    };
   };
 
   const init = () => {
