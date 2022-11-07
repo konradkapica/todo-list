@@ -1,22 +1,22 @@
 .form {
     background-color: white;
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 155px;
+    grid-gap: 20px;
 }
 
 @media (max-width: 767px) {
     .form {
+        display: flex;
         flex-direction: column;
         align-items: stretch;
     }
 }
 
 .form__input {
-    margin: 20px;
     padding: 10px;
     border: 1px solid #eee;
-    flex-grow: 1;
 }
 
 .form__button {
@@ -24,16 +24,13 @@
     background-color: teal;
     color: white;
     padding: 10px;
-    margin-right: 20px;
     border: none;
-    align-self: center;
 }
 
 @media (max-width: 767px) {
     .form__button {
         flex-grow: 1;
         align-self: stretch;
-        margin: 0 20px 20px 20px;
     }
 }
 
