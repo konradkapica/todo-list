@@ -40,10 +40,10 @@
   };
 
   const render = () => {
-    let htmlString = "";
+    let taskListHTMLContent = "";
 
     for (const task of tasks) {
-      htmlString += `
+      taskListHTMLContent += `
            <li
              class="list__item"
            >
@@ -54,7 +54,7 @@
             `;
     };
 
-    document.querySelector(".js-tasks").innerHTML = htmlString;
+    document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
 
     bindDoneEvents();
     bindRemoveEvents();
