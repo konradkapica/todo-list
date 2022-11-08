@@ -10,6 +10,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    grid-gap: 10px;
 }
 
 .list__item--done {
@@ -21,14 +22,16 @@
     height: 30px;
     width: 30px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .list__button--done {
     background-color: green;
-    margin-right: 10px;
 }
 
 .list__button--remove {
     background-color: rgb(208, 0, 0);
-    margin-left: 10px;
 }
