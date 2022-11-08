@@ -2,7 +2,7 @@
     background-color: white;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 155px;
+    grid-template-columns: 1fr auto;
     grid-gap: 20px;
 }
 
@@ -34,6 +34,10 @@
     }
 }
 
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
 .form__button:active {
-    border: 1px solid black;
+    background-color: hsl(180, 100%, 35%);
 }
