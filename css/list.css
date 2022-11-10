@@ -29,6 +29,7 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+    transition: 0.3s;
 }
 
 .list__button--done {

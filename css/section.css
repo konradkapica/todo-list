@@ -54,6 +54,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: 0.3s;
 }
 
 @media (max-width: 767px) {
