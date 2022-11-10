@@ -3,10 +3,13 @@
     background-color: white;
     margin: 0;
     padding: 20px;
+    display: grid;
+    grid-column-end: span 2;
 }
 
 .list__item {
     border-bottom: 1px solid rgb(211, 211, 211);
+    padding: 0 10px;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -50,4 +53,8 @@
 
 .list__button--remove:active {
     background-color: hsl(0, 100%, 50%);
+}
+
+.list__item--hide {
+    display: none;
 }
