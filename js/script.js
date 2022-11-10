@@ -18,8 +18,12 @@
     render();
   };
 
-  const toggleTaskDone = (taskIndex) => {
-    tasks[taskIndex].done = !tasks[taskIndex].done;
+  const toggleTaskDone = (index) => {
+    tasks = [
+      ...tasks.slice(0, index),
+      { ...tasks[index], done: !tasks[index].done },
+      ...tasks.slice(index + 1),
+    ];
     render();
   };
 
@@ -61,9 +65,45 @@
     document.querySelector(".js-tasks").innerHTML = taskListHTMLContent;
   };
 
-  const renderButtons = () => { };
+  const renderButtons = () => {
+    let buttonsEventHTMLContent = "";
 
-  const bindButtonsEvents = () => { };
+    if (!tasks.length) {
+      return;
+    }
+
+    buttonsEventHTMLContent += `
+    <h2 class="section__header--list">Lista zadań</h2>
+    <button class="section__button">Ukryj ukończone</button>
+    <button 
+     ${tasks.every(({ done }) => done) ? "disabled" : ""}
+     class="section__button js-setAllTasksDone"
+    >
+     Ukończ wszystkie
+    </button>
+    `;
+
+    document.querySelector(".js-buttonsEvent").innerHTML = buttonsEventHTMLContent;
+  };
+
+  const setAllTasksDone = () => {
+    tasks = tasks.map(task => ({
+      ...task,
+      done: true,
+    }));
+
+    render();
+  }
+
+  const bindButtonsEvents = () => {
+    setAllTasksDoneButton = document.querySelector(".js-setAllTasksDone");
+
+    if (setAllTasksDoneButton) {
+      setAllTasksDoneButton.addEventListener("click", () => {
+        setAllTasksDone();
+      });
+    }
+  };
 
   const render = () => {
     renderTasks();

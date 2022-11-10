@@ -2,15 +2,23 @@
     box-shadow: 0px 0px 6px -4px #000000;
 }
 
+.section__header--display {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
 .section__header {
     background-color: white;
     margin-top: 10px;
     margin-bottom: 0px;
-    padding: 20px;
+    padding: 21px;
     border-bottom: 2px solid rgb(211, 211, 211);
     font-size: 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.section__header--list {
+    margin: 0;
+    font-size: 21px;
 }
 
 @media (max-width: 767px) {
@@ -25,9 +33,20 @@
     border: none;
     padding: 0;
     color: teal;
-    font-size: smaller;
+    font-size: 15px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .section__button {
+        justify-content: center;
+    }
+
+    .section__button:disabled {
+        color: #ddd;
+    }
 }
 
 .section__button:hover {
@@ -36,4 +55,9 @@
 
 .section__button:active {
     color: hsl(180, 100%, 35%);
+}
+
+.section__button:disabled {
+    color: #ccc;
+    cursor: default;
 }
