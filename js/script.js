@@ -69,7 +69,7 @@
             class="list__item ${hideDoneTasks && task.done ? "list__item--hide" : ""}"
            >
              <button class="list__button list__button--done js-done">
-               ${task.done ? "&#10003" : ""}
+               ${task.done ? "✓" : ""}
              </button>
              <p class="${task.done ? " list__item--done" : ""}">
                ${task.content}
@@ -100,7 +100,7 @@
      Ukończ wszystkie
     </button>
     `;
-    
+
     buttonsEvent.innerHTML = buttonsEventHTMLContent;
   };
 

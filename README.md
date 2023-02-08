@@ -4,7 +4,7 @@
 
 ## DEMO
 
-[To-Do List - demo](https://rudolfini.github.io/todo-list/)
+[To-Do List - demo](https://konradkapica.github.io/todo-list/)
 
 ## Description
 
